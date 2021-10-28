@@ -1,0 +1,7 @@
+{
+    "name": "sst-template",
+    "region": "us-west-1",
+    "lint": false,
+    "typeCheck": true,
+    "main": "lib/index.ts"
+}

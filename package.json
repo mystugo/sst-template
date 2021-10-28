@@ -1,0 +1,54 @@
+{
+    "name": "rest-api-ts",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "lint": "eslint src lib --ext .ts",
+        "lint:fix": "eslint src lib --fix --ext .ts",
+        "prepare": "is-ci || husky install",
+        "test": "sst test",
+        "start": "sst start --stage $(whoami)",
+        "build": "sst build",
+        "deploy": "sst deploy",
+        "remove": "sst remove"
+    },
+    "exports": {
+        "#stacks": "./lib/stacks/index.ts"
+    },
+    "dependencies": {
+        "@aws-cdk/aws-codepipeline": "1.114.0",
+        "@aws-cdk/aws-codepipeline-actions": "1.114.0",
+        "@aws-cdk/core": "1.114.0",
+        "@aws-cdk/pipelines": "1.114.0",
+        "@aws-sdk/client-sqs": "^3.36.0",
+        "@serverless-stack/cli": "^0.40.1",
+        "@serverless-stack/resources": "0.40.1",
+        "dotenv-cra": "^3.0.2"
+    },
+    "devDependencies": {
+        "@aws-cdk/assert": "1.114.0",
+        "@commitlint/cli": "^12.1.4",
+        "@commitlint/config-angular": "^12.1.4",
+        "@types/aws-lambda": "^8.10.71",
+        "@types/lodash": "^4.14.175",
+        "@typescript-eslint/eslint-plugin": "^4.28.1",
+        "@typescript-eslint/parser": "^4.28.1",
+        "aws-cdk": "1.114.0",
+        "eslint": "^7.29.0",
+        "eslint-config-marine": "^9.0.6",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "husky": "^6.0.0",
+        "is-ci": "^3.0.0",
+        "lint-staged": "^11.0.0",
+        "prettier": "^2.3.2",
+        "pretty-quick": "^3.1.1",
+        "rimraf": "^3.0.2",
+        "ts-node": "^10.0.0",
+        "typescript": "^4.3.4"
+    },
+    "volta": {
+        "node": "14.18.0"
+    },
+    "packageManager": "yarn@3.1.0"
+}
