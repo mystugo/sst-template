@@ -59,4 +59,4 @@ jobs:
         if: steps.cache-restore.outputs.cache-hit != 'true'
         run: yarn --immutable
       - name: Compile Project
-        run: yarn build
+        run: yarn build:ci
